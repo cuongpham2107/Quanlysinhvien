@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QuanlyhocsinhModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tbl_DanhMucLoi">
+    <Key>
+      <PropertyRef Name="MaLoi" />
+    </Key>
+    <Property Name="MaLoi" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenLoi" Type="nvarchar" MaxLength="50" />
+    <Property Name="Diem" Type="nvarchar" MaxLength="20" />
+    <Property Name="GhiChu" Type="text" />
+    <Property Name="Status" Type="nvarchar" MaxLength="20" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="UpdatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tbl_GiaoVien">
+    <Key>
+      <PropertyRef Name="MaGV" />
+    </Key>
+    <Property Name="MaGV" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HoTen" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ten" Type="nvarchar" MaxLength="50" />
+    <Property Name="DienThoai" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="DiaChi" Type="nvarchar" MaxLength="250" />
+    <Property Name="Status" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbl_GiaoVien_Lop">
+    <Key>
+      <PropertyRef Name="MaGV_Lop" />
+    </Key>
+    <Property Name="MaGV_Lop" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaGV" Type="int" />
+    <Property Name="MaLop" Type="int" />
+    <Property Name="MaNamHoc" Type="int" />
+    <Property Name="MaHK" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_HocKy">
+    <Key>
+      <PropertyRef Name="MaHK" />
+    </Key>
+    <Property Name="MaHK" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenHK" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbl_HocSinh">
+    <Key>
+      <PropertyRef Name="MaHS" />
+    </Key>
+    <Property Name="MaHS" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HoTen" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ten" Type="nvarchar" MaxLength="30" />
+    <Property Name="GioiTinh" Type="nvarchar" MaxLength="30" />
+    <Property Name="DienThoai" Type="nvarchar" MaxLength="30" />
+    <Property Name="DiaChi" Type="nvarchar" MaxLength="250" />
+    <Property Name="MaDT" Type="int" />
+    <Property Name="MaTG" Type="int" />
+    <Property Name="MaLop" Type="int" />
+    <Property Name="GhiChu" Type="text" />
+    <Property Name="DaNghiHoc" Type="bit" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="UpdatedDate" Type="datetime" />
+    <Property Name="UpdatedBy" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_KetQua">
+    <Key>
+      <PropertyRef Name="MaKQ" />
+    </Key>
+    <Property Name="MaKQ" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaMH" Type="int" />
+    <Property Name="MaHS" Type="int" />
+    <Property Name="DiemTK" Type="float" />
+    <Property Name="DiemThiLan1" Type="float" />
+    <Property Name="DiemThiLan2" Type="float" />
+    <Property Name="DiemTB" Type="float" />
+    <Property Name="XepLoai" Type="nvarchar" MaxLength="20" />
+    <Property Name="MaNamHoc" Type="int" />
+    <Property Name="MaHocKy" Type="int" />
+    <Property Name="MaLop" Type="int" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="UpdatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tbl_Lop">
+    <Key>
+      <PropertyRef Name="MaLop" />
+    </Key>
+    <Property Name="MaLop" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenLop" Type="nvarchar" MaxLength="250" />
+    <Property Name="GhiChu" Type="text" />
+    <Property Name="SapXep" Type="nvarchar" MaxLength="250" />
+    <Property Name="MaTruong" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="tbl_MonHoc">
+    <Key>
+      <PropertyRef Name="MaMH" />
+    </Key>
+    <Property Name="MaMH" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenMH" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbl_NamHoc">
+    <Key>
+      <PropertyRef Name="MaNamHoc" />
+    </Key>
+    <Property Name="MaNamHoc" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenNamHoc" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbl_Truong">
+    <Key>
+      <PropertyRef Name="MaTruong" />
+    </Key>
+    <Property Name="MaTruong" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenTruong" Type="nvarchar" MaxLength="250" />
+    <Property Name="Email" Type="nvarchar" MaxLength="30" />
+    <Property Name="DienThoai" Type="nvarchar" MaxLength="30" />
+    <Property Name="DiaChi" Type="nvarchar" MaxLength="250" />
+    <Property Name="Website" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbl_ViPham">
+    <Key>
+      <PropertyRef Name="MaViPham" />
+    </Key>
+    <Property Name="MaViPham" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NgayViPham" Type="datetime" />
+    <Property Name="TongSoLoi" Type="int" />
+    <Property Name="TongDiem" Type="int" />
+    <Property Name="MaLop" Type="int" />
+    <Property Name="MaNamHoc" Type="int" />
+    <Property Name="MaHK" Type="int" />
+    <Property Name="GhiChu" Type="text" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="UpdatedDate" Type="datetime" />
+    <Property Name="DeletedBy" Type="int" />
+    <Property Name="DeletedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tbl_ViPham_CT">
+    <Key>
+      <PropertyRef Name="MaVPCT" />
+    </Key>
+    <Property Name="MaVPCT" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaViPham" Type="int" />
+    <Property Name="MaLoi" Type="int" />
+    <Property Name="TenLoi" Type="nvarchar" MaxLength="50" />
+    <Property Name="Diem" Type="float" />
+    <Property Name="MaHS" Type="int" />
+    <Property Name="NgayViPham" Type="datetime" />
+  </EntityType>
+  <EntityContainer Name="QuanlyhocsinhModelStoreContainer">
+    <EntitySet Name="tbl_DanhMucLoi" EntityType="Self.tbl_DanhMucLoi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_GiaoVien" EntityType="Self.tbl_GiaoVien" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_GiaoVien_Lop" EntityType="Self.tbl_GiaoVien_Lop" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_HocKy" EntityType="Self.tbl_HocKy" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_HocSinh" EntityType="Self.tbl_HocSinh" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_KetQua" EntityType="Self.tbl_KetQua" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Lop" EntityType="Self.tbl_Lop" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_MonHoc" EntityType="Self.tbl_MonHoc" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_NamHoc" EntityType="Self.tbl_NamHoc" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Truong" EntityType="Self.tbl_Truong" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_ViPham" EntityType="Self.tbl_ViPham" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_ViPham_CT" EntityType="Self.tbl_ViPham_CT" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

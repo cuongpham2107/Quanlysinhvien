@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QuanlyhocsinhModelStoreContainer" CdmEntityContainer="QuanlyhocsinhEntities">
+    <EntitySetMapping Name="tbl_DanhMucLoi">
+      <EntityTypeMapping TypeName="QuanlyhocsinhModel.tbl_DanhMucLoi">
+        <MappingFragment StoreEntitySet="tbl_DanhMucLoi">
+          <ScalarProperty Name="MaLoi" ColumnName="MaLoi" />
+          <ScalarProperty Name="TenLoi" ColumnName="TenLoi" />
+          <ScalarProperty Name="Diem" ColumnName="Diem" />
+          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_GiaoVien">
+      <EntityTypeMapping TypeName="QuanlyhocsinhModel.tbl_GiaoVien">
+        <MappingFragment StoreEntitySet="tbl_GiaoVien">
+          <ScalarProperty Name="MaGV" ColumnName="MaGV" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="Ten" ColumnName="Ten" />
+          <ScalarProperty Name="DienThoai" ColumnName="DienThoai" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_GiaoVien_Lop">
+      <EntityTypeMapping TypeName="QuanlyhocsinhModel.tbl_GiaoVien_Lop">
+        <MappingFragment StoreEntitySet="tbl_GiaoVien_Lop">
+          <ScalarProperty Name="MaGV_Lop" ColumnName="MaGV_Lop" />
+          <ScalarProperty Name="MaGV" ColumnName="MaGV" />
+          <ScalarProperty Name="MaLop" ColumnName="MaLop" />
+          <ScalarProperty Name="MaNamHoc" ColumnName="MaNamHoc" />
+          <ScalarProperty Name="MaHK" ColumnName="MaHK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_HocKy">
+      <EntityTypeMapping TypeName="QuanlyhocsinhModel.tbl_HocKy">
+        <MappingFragment StoreEntitySet="tbl_HocKy">
+          <ScalarProperty Name="MaHK" ColumnName="MaHK" />
+          <ScalarProperty Name="TenHK" ColumnName="TenHK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_HocSinh">
+      <EntityTypeMapping TypeName="QuanlyhocsinhModel.tbl_HocSinh">
+        <MappingFragment StoreEntitySet="tbl_HocSinh">
+          <ScalarProperty Name="MaHS" ColumnName="MaHS" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="Ten" ColumnName="Ten" />
+          <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
+          <ScalarProperty Name="DienThoai" ColumnName="DienThoai" />
+          <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+          <ScalarProperty Name="MaDT" ColumnName="MaDT" />
+          <ScalarProperty Name="MaTG" ColumnName="MaTG" />
+          <ScalarProperty Name="MaLop" ColumnName="MaLop" />
+          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+          <ScalarProperty Name="DaNghiHoc" ColumnName="DaNghiHoc" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_KetQua">
+      <EntityTypeMapping TypeName="QuanlyhocsinhModel.tbl_KetQua">
+        <MappingFragment StoreEntitySet="tbl_KetQua">
+          <ScalarProperty Name="MaKQ" ColumnName="MaKQ" />
+          <ScalarProperty Name="MaMH" ColumnName="MaMH" />
+          <ScalarProperty Name="MaHS" ColumnName="MaHS" />
+          <ScalarProperty Name="DiemTK" ColumnName="DiemTK" />
+          <ScalarProperty Name="DiemThiLan1" ColumnName="DiemThiLan1" />
+          <ScalarProperty Name="DiemThiLan2" ColumnName="DiemThiLan2" />
+          <ScalarProperty Name="DiemTB" ColumnName="DiemTB" />
+          <ScalarProperty Name="XepLoai" ColumnName="XepLoai" />
+          <ScalarProperty Name="MaNamHoc" ColumnName="MaNamHoc" />
+          <ScalarProperty Name="MaHocKy" ColumnName="MaHocKy" />
+          <ScalarProperty Name="MaLop" ColumnName="MaLop" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Lop">
+      <EntityTypeMapping TypeName="QuanlyhocsinhModel.tbl_Lop">
+        <MappingFragment StoreEntitySet="tbl_Lop">
+          <ScalarProperty Name="MaLop" ColumnName="MaLop" />
+          <ScalarProperty Name="TenLop" ColumnName="TenLop" />
+          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+          <ScalarProperty Name="SapXep" ColumnName="SapXep" />
+          <ScalarProperty Name="MaTruong" ColumnName="MaTruong" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_MonHoc">
+      <EntityTypeMapping TypeName="QuanlyhocsinhModel.tbl_MonHoc">
+        <MappingFragment StoreEntitySet="tbl_MonHoc">
+          <ScalarProperty Name="MaMH" ColumnName="MaMH" />
+          <ScalarProperty Name="TenMH" ColumnName="TenMH" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_NamHoc">
+      <EntityTypeMapping TypeName="QuanlyhocsinhModel.tbl_NamHoc">
+        <MappingFragment StoreEntitySet="tbl_NamHoc">
+          <ScalarProperty Name="MaNamHoc" ColumnName="MaNamHoc" />
+          <ScalarProperty Name="TenNamHoc" ColumnName="TenNamHoc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Truong">
+      <EntityTypeMapping TypeName="QuanlyhocsinhModel.tbl_Truong">
+        <MappingFragment StoreEntitySet="tbl_Truong">
+          <ScalarProperty Name="MaTruong" ColumnName="MaTruong" />
+          <ScalarProperty Name="TenTruong" ColumnName="TenTruong" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="DienThoai" ColumnName="DienThoai" />
+          <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+          <ScalarProperty Name="Website" ColumnName="Website" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_ViPham">
+      <EntityTypeMapping TypeName="QuanlyhocsinhModel.tbl_ViPham">
+        <MappingFragment StoreEntitySet="tbl_ViPham">
+          <ScalarProperty Name="MaViPham" ColumnName="MaViPham" />
+          <ScalarProperty Name="NgayViPham" ColumnName="NgayViPham" />
+          <ScalarProperty Name="TongSoLoi" ColumnName="TongSoLoi" />
+          <ScalarProperty Name="TongDiem" ColumnName="TongDiem" />
+          <ScalarProperty Name="MaLop" ColumnName="MaLop" />
+          <ScalarProperty Name="MaNamHoc" ColumnName="MaNamHoc" />
+          <ScalarProperty Name="MaHK" ColumnName="MaHK" />
+          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="DeletedBy" ColumnName="DeletedBy" />
+          <ScalarProperty Name="DeletedDate" ColumnName="DeletedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_ViPham_CT">
+      <EntityTypeMapping TypeName="QuanlyhocsinhModel.tbl_ViPham_CT">
+        <MappingFragment StoreEntitySet="tbl_ViPham_CT">
+          <ScalarProperty Name="MaVPCT" ColumnName="MaVPCT" />
+          <ScalarProperty Name="MaViPham" ColumnName="MaViPham" />
+          <ScalarProperty Name="MaLoi" ColumnName="MaLoi" />
+          <ScalarProperty Name="TenLoi" ColumnName="TenLoi" />
+          <ScalarProperty Name="Diem" ColumnName="Diem" />
+          <ScalarProperty Name="MaHS" ColumnName="MaHS" />
+          <ScalarProperty Name="NgayViPham" ColumnName="NgayViPham" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

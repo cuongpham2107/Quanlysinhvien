@@ -1,0 +1,15 @@
+C:\Users\cuong\source\repos\Quanlyhocsinh\BussinessLayer\bin\Debug\BussinessLayer.dll.config
+C:\Users\cuong\source\repos\Quanlyhocsinh\BussinessLayer\bin\Debug\BussinessLayer.dll
+C:\Users\cuong\source\repos\Quanlyhocsinh\BussinessLayer\bin\Debug\BussinessLayer.pdb
+C:\Users\cuong\source\repos\Quanlyhocsinh\BussinessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\cuong\source\repos\Quanlyhocsinh\BussinessLayer\bin\Debug\EntityFramework.dll
+C:\Users\cuong\source\repos\Quanlyhocsinh\BussinessLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\cuong\source\repos\Quanlyhocsinh\BussinessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\cuong\source\repos\Quanlyhocsinh\BussinessLayer\bin\Debug\DataAccessLayer.dll.config
+C:\Users\cuong\source\repos\Quanlyhocsinh\BussinessLayer\bin\Debug\EntityFramework.xml
+C:\Users\cuong\source\repos\Quanlyhocsinh\BussinessLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\cuong\source\repos\Quanlyhocsinh\BussinessLayer\obj\Debug\BussinessLayer.csproj.AssemblyReference.cache
+C:\Users\cuong\source\repos\Quanlyhocsinh\BussinessLayer\obj\Debug\BussinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\cuong\source\repos\Quanlyhocsinh\BussinessLayer\obj\Debug\BussinessLayer.csproj.CopyComplete
+C:\Users\cuong\source\repos\Quanlyhocsinh\BussinessLayer\obj\Debug\BussinessLayer.dll
+C:\Users\cuong\source\repos\Quanlyhocsinh\BussinessLayer\obj\Debug\BussinessLayer.pdb
