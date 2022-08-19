@@ -9,10 +9,10 @@ namespace BussinessLayer
 {
     public class User
     {
-        QuanlyhocsinhEntities db;
+        QuanlyEntities db;
         public User()
         {
-            db = new QuanlyhocsinhEntities(); 
+            db = new QuanlyEntities(); 
         } 
         public Boolean Login(string username, string password)
         {

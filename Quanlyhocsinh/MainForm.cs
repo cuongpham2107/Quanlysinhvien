@@ -9,7 +9,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraSplashScreen;
-using System.Drawing;
 
 namespace Quanlyhocsinh
 {
@@ -34,6 +33,29 @@ namespace Quanlyhocsinh
             Common.handle = ShowProgressPanel(this, options);
             formLogin form = new formLogin();
             form.ShowDialog();
+        }
+        void OpenForm(Type typeForm)
+        {
+            foreach (var frm in MdiChildren)
+            {
+                if(frm.GetType() == typeForm)
+                {
+                    frm.Activate();
+                    return;
+                }
+            }
+            Form form = (Form)Activator.CreateInstance(typeForm);
+            form.MdiParent = this;
+            form.Show();
+        }
+        private void mnMonHoc_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            OpenForm(typeof(formMonHoc));
+        }
+
+        private void mnNamHoc_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            OpenForm(typeof(formNamHoc));
         }
     }
 }

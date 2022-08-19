@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="630f2a998a1a428e82f135f1d6fb8a65" Name="Diagram1">
+        <EntityTypeShape EntityType="QuanlyModel.tbl_DanhMucLoi" Width="1.5" PointX="1.125" PointY="0.5" />
+        <EntityTypeShape EntityType="QuanlyModel.tbl_GiaoVien" Width="1.5" PointX="3.125" PointY="0.5" />
+        <EntityTypeShape EntityType="QuanlyModel.tbl_GiaoVien_Lop" Width="1.5" PointX="5.125" PointY="0.5" />
+        <EntityTypeShape EntityType="QuanlyModel.tbl_HocKy" Width="1.5" PointX="5.125" PointY="3.5" />
+        <EntityTypeShape EntityType="QuanlyModel.tbl_HocSinh" Width="1.5" PointX="1.125" PointY="5.5" />
+        <EntityTypeShape EntityType="QuanlyModel.tbl_KetQua" Width="1.5" PointX="7.125" PointY="0.5" />
+        <EntityTypeShape EntityType="QuanlyModel.tbl_Lop" Width="1.5" PointX="7.125" PointY="6.5" />
+        <EntityTypeShape EntityType="QuanlyModel.tbl_MonHoc" Width="1.5" PointX="3.125" PointY="7.5" />
+        <EntityTypeShape EntityType="QuanlyModel.tbl_NamHoc" Width="1.5" PointX="9.125" PointY="0.5" />
+        <EntityTypeShape EntityType="QuanlyModel.tbl_Truong" Width="1.5" PointX="9.125" PointY="4.5" />
+        <EntityTypeShape EntityType="QuanlyModel.tbl_User" Width="1.5" PointX="9.125" PointY="9.5" />
+        <EntityTypeShape EntityType="QuanlyModel.tbl_ViPham" Width="1.5" PointX="11.125" PointY="0.5" />
+        <EntityTypeShape EntityType="QuanlyModel.tbl_ViPham_CT" Width="1.5" PointX="5.125" PointY="10.5" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

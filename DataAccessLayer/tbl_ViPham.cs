@@ -22,7 +22,7 @@ namespace DataAccessLayer
         public Nullable<int> MaNamHoc { get; set; }
         public Nullable<int> MaHK { get; set; }
         public string GhiChu { get; set; }
-        public Nullable<int> CreatedBy { get; set; }
+        public Nullable<int> CrearedBy { get; set; }
         public Nullable<System.DateTime> CreatedDate { get; set; }
         public Nullable<int> UpdatedBy { get; set; }
         public Nullable<System.DateTime> UpdatedDate { get; set; }

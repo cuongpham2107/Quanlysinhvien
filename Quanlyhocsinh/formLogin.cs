@@ -44,7 +44,7 @@ namespace Quanlyhocsinh
             if(lg == true)
             {
                 Common.UserStatic = _user.getItem(txtUserName.Text);
-                MainForm main =(MainForm)Application.OpenForms["MianForm"];
+                MainForm main =(MainForm)Application.OpenForms["MainForm"];
                 main.lbFullName.Caption = Common.UserStatic.fullname;
                 if (Common.handle != null)
                 {

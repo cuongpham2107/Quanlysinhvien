@@ -16,5 +16,11 @@ namespace DataAccessLayer
     {
         public int MaHK { get; set; }
         public string TenHK { get; set; }
+        public Nullable<int> CrearedBy { get; set; }
+        public Nullable<System.DateTime> CreatedDate { get; set; }
+        public Nullable<int> UpdatedBy { get; set; }
+        public Nullable<System.DateTime> UpdatedDate { get; set; }
+        public Nullable<int> DeletedBy { get; set; }
+        public Nullable<System.DateTime> DeletedDate { get; set; }
     }
 }

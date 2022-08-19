@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QuanlyModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="QuanlyEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tbl_DanhMucLoi" EntityType="QuanlyModel.tbl_DanhMucLoi" />
+    <EntitySet Name="tbl_GiaoVien" EntityType="QuanlyModel.tbl_GiaoVien" />
+    <EntitySet Name="tbl_GiaoVien_Lop" EntityType="QuanlyModel.tbl_GiaoVien_Lop" />
+    <EntitySet Name="tbl_HocKy" EntityType="QuanlyModel.tbl_HocKy" />
+    <EntitySet Name="tbl_HocSinh" EntityType="QuanlyModel.tbl_HocSinh" />
+    <EntitySet Name="tbl_KetQua" EntityType="QuanlyModel.tbl_KetQua" />
+    <EntitySet Name="tbl_Lop" EntityType="QuanlyModel.tbl_Lop" />
+    <EntitySet Name="tbl_MonHoc" EntityType="QuanlyModel.tbl_MonHoc" />
+    <EntitySet Name="tbl_NamHoc" EntityType="QuanlyModel.tbl_NamHoc" />
+    <EntitySet Name="tbl_Truong" EntityType="QuanlyModel.tbl_Truong" />
+    <EntitySet Name="tbl_User" EntityType="QuanlyModel.tbl_User" />
+    <EntitySet Name="tbl_ViPham" EntityType="QuanlyModel.tbl_ViPham" />
+    <EntitySet Name="tbl_ViPham_CT" EntityType="QuanlyModel.tbl_ViPham_CT" />
+  </EntityContainer>
+  <EntityType Name="tbl_DanhMucLoi">
+    <Key>
+      <PropertyRef Name="MaLoi" />
+    </Key>
+    <Property Name="MaLoi" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenLoi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Diem" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="GhiChu" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CrearedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedBy" Type="Int32" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbl_GiaoVien">
+    <Key>
+      <PropertyRef Name="MaGV" />
+    </Key>
+    <Property Name="MaGV" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HoTen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Ten" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DienThoai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DiaChi" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="CrearedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedBy" Type="Int32" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbl_GiaoVien_Lop">
+    <Key>
+      <PropertyRef Name="MaGV_Lop" />
+    </Key>
+    <Property Name="MaGV_Lop" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaGV" Type="Int32" />
+    <Property Name="MaLop" Type="Int32" />
+    <Property Name="MaNamHoc" Type="Int32" />
+    <Property Name="MaHK" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tbl_HocKy">
+    <Key>
+      <PropertyRef Name="MaHK" />
+    </Key>
+    <Property Name="MaHK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenHK" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CrearedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedBy" Type="Int32" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbl_HocSinh">
+    <Key>
+      <PropertyRef Name="MaHS" />
+    </Key>
+    <Property Name="MaHS" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HoTen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Ten" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="GioiTinh" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="DienThoai" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="DiaChi" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="MaDT" Type="Int32" />
+    <Property Name="MaTG" Type="Int32" />
+    <Property Name="MaLop" Type="Int32" />
+    <Property Name="GhiChu" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="DaNghiHoc" Type="Boolean" />
+    <Property Name="CrearedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedBy" Type="Int32" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbl_KetQua">
+    <Key>
+      <PropertyRef Name="MaKQ" />
+    </Key>
+    <Property Name="MaKQ" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaMH" Type="Int32" />
+    <Property Name="MaHS" Type="Int32" />
+    <Property Name="DiemTK" Type="Double" />
+    <Property Name="DiemThiLan1" Type="Double" />
+    <Property Name="DiemThiLan2" Type="Double" />
+    <Property Name="DiemTB" Type="Double" />
+    <Property Name="XepLoai" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="MaNamHoc" Type="Int32" />
+    <Property Name="MaHocKy" Type="Int32" />
+    <Property Name="MaLop" Type="Int32" />
+    <Property Name="CrearedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedBy" Type="Int32" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbl_Lop">
+    <Key>
+      <PropertyRef Name="MaLop" />
+    </Key>
+    <Property Name="MaLop" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenLop" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="GhiChu" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="SapXep" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="MaTruong" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="CrearedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedBy" Type="Int32" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbl_MonHoc">
+    <Key>
+      <PropertyRef Name="MaMH" />
+    </Key>
+    <Property Name="MaMH" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenMH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HeSo" Type="Int32" />
+    <Property Name="SoTiet" Type="Int32" />
+    <Property Name="CrearedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedBy" Type="Int32" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbl_NamHoc">
+    <Key>
+      <PropertyRef Name="MaNamHoc" />
+    </Key>
+    <Property Name="MaNamHoc" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenNamHoc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CrearedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedBy" Type="Int32" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbl_Truong">
+    <Key>
+      <PropertyRef Name="MaTruong" />
+    </Key>
+    <Property Name="MaTruong" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenTruong" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="DienThoai" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="DiaChi" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Website" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CrearedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedBy" Type="Int32" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbl_User">
+    <Key>
+      <PropertyRef Name="UID" />
+    </Key>
+    <Property Name="UID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fullname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MATruong" Type="Int32" />
+    <Property Name="MaLop" Type="Int32" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tbl_ViPham">
+    <Key>
+      <PropertyRef Name="MaViPham" />
+    </Key>
+    <Property Name="MaViPham" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NgayViPham" Type="DateTime" Precision="3" />
+    <Property Name="TongSoLoi" Type="Int32" />
+    <Property Name="TongDiem" Type="Int32" />
+    <Property Name="MaLop" Type="Int32" />
+    <Property Name="MaNamHoc" Type="Int32" />
+    <Property Name="MaHK" Type="Int32" />
+    <Property Name="GhiChu" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CrearedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedBy" Type="Int32" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbl_ViPham_CT">
+    <Key>
+      <PropertyRef Name="MaVPCT" />
+    </Key>
+    <Property Name="MaVPCT" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaViPham" Type="Int32" />
+    <Property Name="MaLoi" Type="Int32" />
+    <Property Name="TenLoi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Diem" Type="Double" />
+    <Property Name="MaHS" Type="Int32" />
+    <Property Name="NgayViPham" Type="DateTime" Precision="3" />
+  </EntityType>
+</Schema>

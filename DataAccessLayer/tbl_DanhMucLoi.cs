@@ -18,10 +18,11 @@ namespace DataAccessLayer
         public string TenLoi { get; set; }
         public string Diem { get; set; }
         public string GhiChu { get; set; }
-        public string Status { get; set; }
-        public Nullable<int> CreatedBy { get; set; }
+        public Nullable<int> CrearedBy { get; set; }
         public Nullable<System.DateTime> CreatedDate { get; set; }
         public Nullable<int> UpdatedBy { get; set; }
         public Nullable<System.DateTime> UpdatedDate { get; set; }
+        public Nullable<int> DeletedBy { get; set; }
+        public Nullable<System.DateTime> DeletedDate { get; set; }
     }
 }

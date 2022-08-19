@@ -164,7 +164,7 @@
     <Property Name="MaHS" Type="Int32" />
     <Property Name="NgayViPham" Type="DateTime" Precision="3" />
   </EntityType>
-  <EntityContainer Name="QuanlyhocsinhEntities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="QuanlyhocsinhEntities1" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="tbl_DanhMucLoi" EntityType="Self.tbl_DanhMucLoi" />
     <EntitySet Name="tbl_GiaoVien" EntityType="Self.tbl_GiaoVien" />
     <EntitySet Name="tbl_GiaoVien_Lop" EntityType="Self.tbl_GiaoVien_Lop" />

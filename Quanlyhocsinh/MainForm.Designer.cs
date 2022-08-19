@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.mnBackup = new DevExpress.XtraBars.BarButtonItem();
@@ -60,6 +61,7 @@
             this.mnTKNam = new DevExpress.XtraBars.BarButtonItem();
             this.mnKQHTTheoLop = new DevExpress.XtraBars.BarButtonItem();
             this.mnKQHTTheoMonHoc = new DevExpress.XtraBars.BarButtonItem();
+            this.lbFullName = new DevExpress.XtraBars.BarStaticItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -74,8 +76,11 @@
             this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
-            this.lbFullName = new DevExpress.XtraBars.BarStaticItem();
+            this.documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
+            this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbon
@@ -238,6 +243,7 @@
             this.mnMonHoc.Id = 16;
             this.mnMonHoc.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("mnMonHoc.ImageOptions.SvgImage")));
             this.mnMonHoc.Name = "mnMonHoc";
+            this.mnMonHoc.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.mnMonHoc_ItemClick);
             // 
             // mnNamHoc
             // 
@@ -245,6 +251,7 @@
             this.mnNamHoc.Id = 17;
             this.mnNamHoc.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("mnNamHoc.ImageOptions.SvgImage")));
             this.mnNamHoc.Name = "mnNamHoc";
+            this.mnNamHoc.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.mnNamHoc_ItemClick);
             // 
             // mnHocKy
             // 
@@ -336,6 +343,14 @@
             this.mnKQHTTheoMonHoc.Id = 32;
             this.mnKQHTTheoMonHoc.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("mnKQHTTheoMonHoc.ImageOptions.SvgImage")));
             this.mnKQHTTheoMonHoc.Name = "mnKQHTTheoMonHoc";
+            // 
+            // lbFullName
+            // 
+            this.lbFullName.Caption = "Full Name";
+            this.lbFullName.Id = 33;
+            this.lbFullName.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("lbFullName.ImageOptions.SvgImage")));
+            this.lbFullName.Name = "lbFullName";
+            this.lbFullName.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             // 
             // ribbonPage1
             // 
@@ -452,13 +467,13 @@
             this.ribbonStatusBar.Ribbon = this.ribbon;
             this.ribbonStatusBar.Size = new System.Drawing.Size(1254, 32);
             // 
-            // lbFullName
+            // documentManager1
             // 
-            this.lbFullName.Caption = "Full Name";
-            this.lbFullName.Id = 33;
-            this.lbFullName.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barStaticItem1.ImageOptions.SvgImage")));
-            this.lbFullName.Name = "lbFullName";
-            this.lbFullName.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.documentManager1.MdiParent = this;
+            this.documentManager1.MenuManager = this.ribbon;
+            this.documentManager1.View = this.tabbedView1;
+            this.documentManager1.ViewCollection.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseView[] {
+            this.tabbedView1});
             // 
             // MainForm
             // 
@@ -467,6 +482,7 @@
             this.ClientSize = new System.Drawing.Size(1254, 553);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
+            this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
             this.Ribbon = this.ribbon;
@@ -475,6 +491,8 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -528,5 +546,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
         public DevExpress.XtraBars.BarStaticItem lbFullName;
+        private DevExpress.XtraBars.Docking2010.DocumentManager documentManager1;
+        private DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView tabbedView1;
     }
 }
