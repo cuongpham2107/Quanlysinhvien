@@ -25,6 +25,8 @@ namespace DataAccessLayer
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<tbl_ChuVu> tbl_ChuVu { get; set; }
+        public virtual DbSet<tbl_DanToc> tbl_DanToc { get; set; }
         public virtual DbSet<tbl_DanhMucLoi> tbl_DanhMucLoi { get; set; }
         public virtual DbSet<tbl_GiaoVien> tbl_GiaoVien { get; set; }
         public virtual DbSet<tbl_GiaoVien_Lop> tbl_GiaoVien_Lop { get; set; }

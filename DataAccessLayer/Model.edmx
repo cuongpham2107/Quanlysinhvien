@@ -5,6 +5,20 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="QuanlyModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tbl_ChuVu">
+          <Key>
+            <PropertyRef Name="MaCV" />
+          </Key>
+          <Property Name="MaCV" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TenCV" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tbl_DanToc">
+          <Key>
+            <PropertyRef Name="MaDT" />
+          </Key>
+          <Property Name="MaDT" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TenDT" Type="nvarchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="tbl_DanhMucLoi">
           <Key>
             <PropertyRef Name="MaLoi" />
@@ -27,9 +41,14 @@
           <Property Name="MaGV" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="HoTen" Type="nvarchar" MaxLength="50" />
           <Property Name="Ten" Type="nvarchar" MaxLength="50" />
+          <Property Name="GioiTinh" Type="int" />
+          <Property Name="NgaySinh" Type="date" />
+          <Property Name="HinhAnh" Type="varbinary(max)" />
           <Property Name="DienThoai" Type="nvarchar" MaxLength="50" />
           <Property Name="Email" Type="nvarchar" MaxLength="50" />
           <Property Name="DiaChi" Type="nvarchar" MaxLength="250" />
+          <Property Name="MaTD" Type="int" />
+          <Property Name="MaCV" Type="int" />
           <Property Name="CrearedBy" Type="int" />
           <Property Name="CreatedDate" Type="datetime" />
           <Property Name="UpdatedBy" Type="int" />
@@ -211,6 +230,8 @@
           <Property Name="NgayViPham" Type="datetime" />
         </EntityType>
         <EntityContainer Name="QuanlyModelStoreContainer">
+          <EntitySet Name="tbl_ChuVu" EntityType="Self.tbl_ChuVu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_DanToc" EntityType="Self.tbl_DanToc" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_DanhMucLoi" EntityType="Self.tbl_DanhMucLoi" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_GiaoVien" EntityType="Self.tbl_GiaoVien" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_GiaoVien_Lop" EntityType="Self.tbl_GiaoVien_Lop" Schema="dbo" store:Type="Tables" />
@@ -230,6 +251,8 @@
     <edmx:ConceptualModels>
       <Schema Namespace="QuanlyModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="QuanlyEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tbl_ChuVu" EntityType="QuanlyModel.tbl_ChuVu" />
+          <EntitySet Name="tbl_DanToc" EntityType="QuanlyModel.tbl_DanToc" />
           <EntitySet Name="tbl_DanhMucLoi" EntityType="QuanlyModel.tbl_DanhMucLoi" />
           <EntitySet Name="tbl_GiaoVien" EntityType="QuanlyModel.tbl_GiaoVien" />
           <EntitySet Name="tbl_GiaoVien_Lop" EntityType="QuanlyModel.tbl_GiaoVien_Lop" />
@@ -244,6 +267,20 @@
           <EntitySet Name="tbl_ViPham" EntityType="QuanlyModel.tbl_ViPham" />
           <EntitySet Name="tbl_ViPham_CT" EntityType="QuanlyModel.tbl_ViPham_CT" />
         </EntityContainer>
+        <EntityType Name="tbl_ChuVu">
+          <Key>
+            <PropertyRef Name="MaCV" />
+          </Key>
+          <Property Name="MaCV" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TenCV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbl_DanToc">
+          <Key>
+            <PropertyRef Name="MaDT" />
+          </Key>
+          <Property Name="MaDT" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TenDT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
         <EntityType Name="tbl_DanhMucLoi">
           <Key>
             <PropertyRef Name="MaLoi" />
@@ -266,9 +303,14 @@
           <Property Name="MaGV" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="HoTen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Ten" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="GioiTinh" Type="Int32" />
+          <Property Name="NgaySinh" Type="DateTime" Precision="0" />
+          <Property Name="HinhAnh" Type="Binary" MaxLength="Max" FixedLength="false" />
           <Property Name="DienThoai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="DiaChi" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="MaTD" Type="Int32" />
+          <Property Name="MaCV" Type="Int32" />
           <Property Name="CrearedBy" Type="Int32" />
           <Property Name="CreatedDate" Type="DateTime" Precision="3" />
           <Property Name="UpdatedBy" Type="Int32" />
@@ -455,6 +497,22 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="QuanlyModelStoreContainer" CdmEntityContainer="QuanlyEntities">
+          <EntitySetMapping Name="tbl_ChuVu">
+            <EntityTypeMapping TypeName="QuanlyModel.tbl_ChuVu">
+              <MappingFragment StoreEntitySet="tbl_ChuVu">
+                <ScalarProperty Name="TenCV" ColumnName="TenCV" />
+                <ScalarProperty Name="MaCV" ColumnName="MaCV" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_DanToc">
+            <EntityTypeMapping TypeName="QuanlyModel.tbl_DanToc">
+              <MappingFragment StoreEntitySet="tbl_DanToc">
+                <ScalarProperty Name="TenDT" ColumnName="TenDT" />
+                <ScalarProperty Name="MaDT" ColumnName="MaDT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="tbl_DanhMucLoi">
             <EntityTypeMapping TypeName="QuanlyModel.tbl_DanhMucLoi">
               <MappingFragment StoreEntitySet="tbl_DanhMucLoi">
@@ -480,9 +538,14 @@
                 <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
                 <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
                 <ScalarProperty Name="CrearedBy" ColumnName="CrearedBy" />
+                <ScalarProperty Name="MaCV" ColumnName="MaCV" />
+                <ScalarProperty Name="MaTD" ColumnName="MaTD" />
                 <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
                 <ScalarProperty Name="Email" ColumnName="Email" />
                 <ScalarProperty Name="DienThoai" ColumnName="DienThoai" />
+                <ScalarProperty Name="HinhAnh" ColumnName="HinhAnh" />
+                <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+                <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
                 <ScalarProperty Name="Ten" ColumnName="Ten" />
                 <ScalarProperty Name="HoTen" ColumnName="HoTen" />
                 <ScalarProperty Name="MaGV" ColumnName="MaGV" />

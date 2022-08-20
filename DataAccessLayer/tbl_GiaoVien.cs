@@ -17,9 +17,14 @@ namespace DataAccessLayer
         public int MaGV { get; set; }
         public string HoTen { get; set; }
         public string Ten { get; set; }
+        public Nullable<int> GioiTinh { get; set; }
+        public Nullable<System.DateTime> NgaySinh { get; set; }
+        public byte[] HinhAnh { get; set; }
         public string DienThoai { get; set; }
         public string Email { get; set; }
         public string DiaChi { get; set; }
+        public Nullable<int> MaTD { get; set; }
+        public Nullable<int> MaCV { get; set; }
         public Nullable<int> CrearedBy { get; set; }
         public Nullable<System.DateTime> CreatedDate { get; set; }
         public Nullable<int> UpdatedBy { get; set; }
